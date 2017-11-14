@@ -59,7 +59,7 @@ with tf.Session() as sess:
             score = predictions[0][first_index]
 
             import csv   
-            fields=[str(category_index), category,str(first_index), human_string]
+            fields=[str(category_index), category,str(first_index), human_string, image_path]
             with open(results_file_path, 'a+') as f:
                 writer = csv.writer(f)
                 writer.writerow(fields)
